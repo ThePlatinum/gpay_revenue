@@ -15,8 +15,14 @@ export const FooterBox = styled(Box)`
 	@media only screen and (max-width: 768px) {
 		height: 50vh;
 	}
+	@media only screen and (max-width: 580px) {
+		height: 64vh;
+	}
 	@media only screen and (max-width: 480px) {
-		height: 74vh;
+		height: 85vh;
+	}
+	@media only screen and (max-width: 380px) {
+		height: 90vh;
 	}
 `;
 export const FooterContainer = styled(Box)`
@@ -25,7 +31,7 @@ export const FooterContainer = styled(Box)`
 	margin: 0 auto;
 	position: relative;
 	@media only screen and (max-width: 786px) {
-		width: 85%;
+		width: 95%;
 	}
 	@media only screen and (max-width: 480px) {
 		width: 95%;
@@ -47,6 +53,7 @@ export const Footerhead = styled(Box)`
 	padding: 0 0 2.5rem;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-wrap: wrap;
 	border-bottom: 2px solid grey;
 	@media only screen and (max-width: 768px) {
@@ -61,39 +68,55 @@ export const HeadBox = styled(Box)`
 	width: 35%;
     display: flex;
     align-items: center;
-	@media only screen and (max-width: 768px) {
-		width: 25%;
-		&:first-of-type {
-			width: 35%;
-		}
-	}
-	@media only screen and (max-width: 480px) {
-		width: 35%;
-		&:first-of-type {
+	@media only screen and (min-width: 769px) and (max-width: 960px){
+		width:30%;
+		img {
 			width: 50%;
 		}
+	}
+	@media only screen and (max-width: 768px) {
+		width: 32%;
+	img {
+		width: 45%;
+	}
+	}
+	@media only screen and (max-width: 480px) {
+		width: 75%;
+		
+	}
+	@media only screen and (max-width: 580px) {
+		width: 39%;
+		
 	}
 `;
 export const HeadBoxA = styled(Box)`
 	width: 40%;
     display: flex;
     align-items: center;
+	@media only screen and (min-width: 769px) and (max-width: 960px){
+		width: 45%;
+	}
 	@media only screen and (max-width: 768px) {
-		width: 25%;
-		&:first-of-type {
-			width: 35%;
-		}
+		width: 45%;
+		justify-content: space-between;
+		align-items: flex-start;
+		
+	}
+	@media only screen and (max-width: 580px) {
+		width: 55%;
+		
 	}
 	@media only screen and (max-width: 480px) {
-		width: 35%;
-		&:first-of-type {
-			width: 50%;
-		}
+		width: 100%;
+	justify-content: space-between;
 	}
 `;
 
 export const FooterList = styled(Box)`
 width: 30%;
+@media only screen and (max-width: 768px){
+	
+}
 `
 export const HeadBoxB = styled(Box)`
 	width: 12%;
@@ -132,17 +155,26 @@ export const HeadBoxB = styled(Box)`
         }
 		
 	}
+	@media only screen and (min-width: 769px) and (max-width: 960px){
+		width: 17%;
+	}
 	@media only screen and (max-width: 768px) {
-		width: 25%;
+		width: 20%;
 		&:first-of-type {
 			width: 35%;
 		}
 	}
-	@media only screen and (max-width: 480px) {
-		width: 35%;
-		&:first-of-type {
-			width: 50%;
+	@media only screen and (max-width: 575px) {
+		margin-top: 1.5rem;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		a{
+			.MuiButton-root.MuiButton-contained{
+				margin-bottom: 0;
+			}
 		}
+		
 	}
 `;
 export const NavButton = styled(Button)`
@@ -172,10 +204,11 @@ export const HeadchildA = styled(Box)`
 		font-size: 12.8571px;
         line-height: 21px;
 	}
+	@media only screen and (min-width: 769px) and (max-width: 960px){
+		min-height: 2rem;
+	}
 	@media only screen and (max-width: 768px) {
-		img {
-			height: 3rem;
-		}
+		min-height: 3rem;
 		.MuiTypography-root.MuiTypography-h4 {
 			font-size: 2rem;
 		}
@@ -191,9 +224,7 @@ export const HeadchildA = styled(Box)`
 	@media only screen and (max-width: 480px) {
 		align-items: flex-start;
 		margin-top: 2rem;
-		img {
-			height: 3.5rem;
-		}
+		min-height: 3rem;
 		.MuiTypography-root.MuiTypography-h4 {
 			font-size: 2rem;
 		}
@@ -317,9 +348,8 @@ export const Footerbody = styled(Box)`
 	}
 	@media only screen and (max-width: 480px) {
 		width: 95%;
-		justify-content: space-between;
-		margin: 1rem auto 0;
-		align-items: center;
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
 		.MuiTypography-root.MuiTypography-body1 {
 			font-size: 0.75rem;
 		}
@@ -335,17 +365,42 @@ export const Copyrightbox = styled(Box)`
 	.MuiTypography-root {
 		color: #757575;
 	}
+	@media only screen and (min-width: 1064px) and (max-width: 1489px){
+		width:35%;
+	}
+	@media only screen and (min-width: 769px) and (max-width: 1063px){
+		width:39%;
+		.MuiTypography-root{
+			font-size: 0.8rem;
+		}
+	}
 	@media only screen and (max-width: 768px) {
-		width: 40%;
+		width: 42%;
+		.MuiTypography-root{
+			font-size: 0.8rem;
+		}
 	}
 	@media only screen and (max-width: 480px) {
-		justify-content: flex-start;
+		width: 100%;
+		justify-content: center;
+		margin-top: 1rem;
 	}
 `;
 
 export const BodyLogo = styled(Box)`
 width: 25%;
 text-align: start;
+@media only screen and (max-width: 768px){
+	width: 22%;
+	img {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 480px) {
+	width: 80%;
+	text-align: center;
+	margin-top: 1rem;
+}
 `
 
 export const SocialBox = styled(Box)`
@@ -357,5 +412,21 @@ div {
     width: 60%;
     display: flex;
     justify-content: space-around;
+}
+@media only screen and (min-width: 769px) and (max-width: 1063px){
+	width: 35%;
+	img {
+		width: 17%;
+	}
+}
+@media only screen and (max-width: 768px){
+	width: 35%;
+	img {
+		width: 15%;
+	}
+}
+@media only screen and (max-width: 480px) {
+	width: 100%;
+	justify-content: center;
 }
 `

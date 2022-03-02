@@ -22,11 +22,17 @@ export const MenuBox = styled(Box)`
 		align-items: center;
 		justify-content: center;
 	}
-	@media only screen and (max-width: 1240px) and (min-width: 1024px) {
+	@media only screen and (max-width: 1240px) and (min-width:900px) {
 		width: 90%;
+		.MuiPaper-root.MuiAppBar-root{
+			padding: 0.5rem 2.5rem;
+		}
 	}
 	@media only screen and (max-width: 768px) {
 		width: 95%;
+		.MuiPaper-root.MuiAppBar-root{
+			padding: 0.5rem 1.5rem;
+		}
 	}
 	@media only screen and (max-width: 480px) {
 		height: 15vh;
@@ -57,9 +63,15 @@ export const MenuToolBar = styled(Toolbar)`
 		color: #9e9e9e;
 		font-weight: 600;
 	}
+	@media only screen and (max-width: 1240px) and (min-width:900px){
+		padding: 0 !important;
+	}
 	@media only screen and (max-width: 768px) {
 		width: 100%;
 		padding: 0;
+		.menu-div {
+			width: unset !important;
+		}
 	}
 	@media only screen and (min-width: 769px) {
 		width: 100%;
@@ -67,6 +79,14 @@ export const MenuToolBar = styled(Toolbar)`
 	@media only screen and (min-width: 480px) {
 		padding: 0;
 		padding-left: 0.8rem;
+	
+		
+	}
+	@media only screen and (max-width: 480px){
+		.menu-div {
+			width: 15% !important;
+		}
+	}
 	}
 `;
 export const MenuLogoBox = styled(Box)`
@@ -88,9 +108,21 @@ export const MenuLogoBox = styled(Box)`
 		color: #263238;
 		font-size: 1.8rem;
 	}
+	@media only screen and (max-width: 1240px) and (min-width:900px){
+		width: 22%;
+		img {
+			width: 100%;
+		}
+	}
 	@media only screen and (max-width: 768px) {
 		width: 60%;
 		justify-content: start;
+	}
+	@media only screen and (max-width: 480px){
+		width: 60%;
+		img {
+			width: 100%;
+		}
 	}
 `;
 export const MenuLogo = styled(Typography)`
@@ -140,6 +172,9 @@ export const ButtonBoxA = styled(Box)`
 			border: 1px solid #ffffff;
 		}
 	}
+	@media only screen and (max-width: 1240px) and (min-width:900px){
+		width: 45%;
+	}
 `;
 export const ButtonBoxB = styled(Box)`
 	width: 16%;
@@ -175,9 +210,11 @@ export const ButtonBoxB = styled(Box)`
         }
 		
 	}
-	@media only screen and (min-width: 769px) (max-width: 1240px) {
-		width: 18%;
-		margin: 0 auto;
+	@media only screen and (min-width: 1241px) and (max-width: 1369px){
+		width 20%;
+	}
+	@media only screen and (max-width: 1240px) and (min-width:900px){
+		width: 24%;
 	}
 `;
 export const NavButton = styled(Button)`

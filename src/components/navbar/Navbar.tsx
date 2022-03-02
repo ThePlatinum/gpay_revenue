@@ -1,45 +1,42 @@
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import MoreIcon from "@mui/icons-material/Menu";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import MenuIcon from '@mui/icons-material/Menu';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 import { Link } from "react-router-dom";
 import {
 	ButtonBoxA,
 	ButtonBoxB,
 	MenuBar,
 	MenuBox,
-	MenuLogo,
 	MenuLogoBox,
 	MenuToolBar,
 	NavButton,
 } from "./navbar.style";
 import Logo from "../../assets/irs2_logo 1.png";
 
-
+type Anchor =  'left'
 export default function PrimarySearchAppBar() {
-	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState<null | HTMLElement>(null);
-	// const [backgroundColor, setBackgroundColor] = useState(false);
+	
+	const [state, setState] = useState({
+		left: false,
+	  });
 
-	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-	const handleMobileMenuClose = () => {
-		setMobileMoreAnchorEl(null);
-	};
-
-	const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-		setMobileMoreAnchorEl(event.currentTarget);
-	};
-	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const open = Boolean(anchorEl);
-	const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-		setAnchorEl(event.currentTarget);
-	};
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
+	  const toggleDrawer =
+	  (anchor: Anchor, open: boolean) =>
+	  (event: React.MouseEvent) => {
+		
+		setState({ ...state, [anchor]: open });
+	  };
+	
+	
 	// const changeNavbarColor = () => {
 	// 	if (window.scrollY >= 80) {
 	// 		setBackgroundColor(true);
@@ -48,69 +45,54 @@ export default function PrimarySearchAppBar() {
 	// 	}
 	// };
 	// window.addEventListener("scroll", changeNavbarColor);
-	const mobileMenuId = "primary-search-account-menu-mobile";
-	const renderMobileMenu = (
-		<Menu
-			anchorEl={mobileMoreAnchorEl}
-			anchorOrigin={{ vertical: "top", horizontal: "right" }}
-			id={mobileMenuId}
-			keepMounted
-			transformOrigin={{ vertical: "top", horizontal: "right" }}
-			open={isMobileMenuOpen}
-			onClose={handleMobileMenuClose}
+	
+	const list = (anchor: Anchor) => (
+		<Box
+		  role="presentation"
+		  onClick={toggleDrawer(anchor, false)}
 		>
-			<MenuItem>
-				<Link to="/why">
-					<NavButton variant="text">Why Flexiblebase</NavButton>
-				</Link>
-			</MenuItem>
-			<MenuItem>
-				<Link to="/features">
-					<NavButton variant="text">Features</NavButton>
-				</Link>
-			</MenuItem>
-			<MenuItem>
-				<NavButton
-					variant="text"
-					id="basic-button"
-					aria-controls="basic-menu"
-					aria-haspopup="true"
-					aria-expanded={open ? "true" : undefined}
-					onClick={handleClick}
-					className="resources"
-				>
-					Resources
-					<KeyboardArrowDownIcon
-						style={{ color: "black", fontWeight: "300" }}
-					/>
-				</NavButton>
-			</MenuItem>
-			<MenuItem>
-				<Link to="/pricing">
-					<NavButton variant="text">Pricing</NavButton>
-				</Link>
-			</MenuItem>
-			<MenuItem>
-				<Link to="/about">
-					<NavButton variant="text">About</NavButton>
-				</Link>
-			</MenuItem>
-			<MenuItem>
-				<Link to="/signin">
-					<NavButton variant="text" className="sign">
-						Sign In
-					</NavButton>
-				</Link>
-			</MenuItem>
-			<MenuItem>
-				<Link to="/">
-					<NavButton variant="text" className="sign">
-						Try for free
-					</NavButton>
-				</Link>
-			</MenuItem>
-		</Menu>
-	);
+		  <List>
+			
+			  <ListItem>
+				
+				<ListItemText primary="Tax Information" />
+			
+			  </ListItem>
+			  <ListItem>
+				
+				<ListItemText primary="Support" />
+			
+			  </ListItem>
+			  <ListItem>
+				
+				<ListItemText primary="FAQ" />
+			
+			  </ListItem>
+			  <ListItem>
+				
+				<ListItemText primary="About Us" />
+			
+			  </ListItem>
+			<ListItem>
+			<Link to="/signin">
+							<NavButton variant="outlined" className="sign">
+								Log In
+							</NavButton>
+						</Link>
+					
+			</ListItem>
+			<ListItem>
+			<Link to="/">
+							<NavButton variant="contained" className="free">
+								Register
+							</NavButton>
+						</Link>
+			</ListItem>
+		  </List>
+		 
+		</Box>
+	  );
+	
 
 	return (
 		<MenuBox sx={{ flexGrow: 1 }} className="colorChange">
@@ -154,44 +136,32 @@ export default function PrimarySearchAppBar() {
 							</NavButton>
 						</Link>
 					</ButtonBoxB>
-					<Menu
-						id="basic-menu"
-						anchorEl={anchorEl}
-						open={open}
-						onClose={handleClose}
-						MenuListProps={{
-							"aria-labelledby": "basic-button",
-						}}
-					>
-						<MenuItem onClick={handleClose}>
-							{/* <a href={`${pdf}`} type="application/pdf" download="flexiblebase">
-								Feature list brochure
-							</a> */}
-						</MenuItem>
-						{/* <MenuItem onClick={handleClose}>
-							<Link to="/resources">SQL Resources</Link>
-						</MenuItem> */}
-						<MenuItem onClick={handleClose}>
-							<Link to="/blog">Blog</Link>
-						</MenuItem>
-					</Menu>
+				
 					<Box
 						sx={{ display: { xs: "flex", md: "none" } }}
-						style={{ marginRight: "2rem", width: "15%" }}
+						style={{ marginRight: "1rem", width: "15%",  }}
+						className ="menu-div"
 					>
-						<IconButton
-							size="large"
-							aria-label="show more"
-							aria-controls={mobileMenuId}
-							aria-haspopup="true"
-							onClick={handleMobileMenuOpen}
-						>
-							<MoreIcon fontSize="large" />
-						</IconButton>
+						 <>
+      {(['left',] as const).map((anchor) => (
+        <div key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}>
+			  <MenuIcon style={{color: "rgb(232,118,21)"}} />
+			  </Button>
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            {list(anchor)}
+          </Drawer>
+        </div>
+      ))}
+    </>
 					</Box>
 				</MenuToolBar>
 			</MenuBar>
-			{renderMobileMenu}
+			
 		</MenuBox>
 	);
 }

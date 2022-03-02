@@ -11,7 +11,6 @@ import {
 	HeadBoxA,
 	HeadBoxB,
 	HeadchildA,
-	HeadchildB,
 	NavButton,
 	SocialBox,
 	TextBox,
@@ -44,7 +43,7 @@ const Footer = () => {
 							</HeadchildA>
 							<TextBox>
 								<Link to="/">
-									<Typography variant="body1">type of tax</Typography>
+									<Typography variant="body1">Type of tax</Typography>
 								</Link>
 								<Link to="/">
 									<Typography variant="body1">Requirements</Typography>

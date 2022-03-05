@@ -20,7 +20,7 @@ import {
 	MenuToolBar,
 	NavButton,
 } from "./navbar.style";
-import Logo from "../../assets/irs2_logo 1.png";
+import Logo from "../../images/irs2_logo 1.png";
 
 type Anchor =  'left'
 export default function PrimarySearchAppBar() {

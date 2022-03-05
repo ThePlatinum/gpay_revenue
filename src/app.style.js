@@ -3,6 +3,7 @@ import {createGlobalStyle} from "styled-components"
 export const GlobalStyles = createGlobalStyle`
 body {
     width: 100%;
+    overflow-x: hidden;
     .MuiModal-root.MuiDrawer-root {
         width: 100%;
         .MuiPaper-root.MuiDrawer-paper {
@@ -55,6 +56,5 @@ body {
         
     }
     }
-  
 }
 `

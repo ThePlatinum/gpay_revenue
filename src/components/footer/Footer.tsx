@@ -16,12 +16,12 @@ import {
 	TextBox,
 } from "./footer.style";
 import { Link } from "react-router-dom";
-import logo1 from "../../assets/odirs-logo.png";
-import logo2 from "../../assets/GPay Logo 1.png"
-import newlogo from "../../assets/ondo-new-logo.png"
+import logo1 from "../../images/odirs-logo.png";
+import logo2 from "../../images/GPay Logo 1.png"
+import newlogo from "../../images/ondo-new-logo.png"
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { Typography } from "@mui/material";
-import ellipse from "../../assets/Ellipse.png"
+import ellipse from "../../images/Ellipse.png"
 const Footer = () => {
 	return (
 		<FooterBox className="footer">

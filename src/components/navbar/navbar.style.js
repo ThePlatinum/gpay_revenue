@@ -4,7 +4,7 @@ import { Box, Button, Toolbar, Typography } from "@mui/material";
 
 export const MenuBox = styled(Box)`
 	width: 90%;
-	height: 20vh;
+	height: 11vh;
 	margin: 0 auto;
 	padding: 0;
 	top: 0;

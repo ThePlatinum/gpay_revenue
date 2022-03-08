@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from './pages/home/Homepage';
 import { GlobalStyles } from './app.style';
+import Register from './pages/register/Register';
 
 
 
@@ -14,6 +15,7 @@ function App() {
      <Router>
        <Routes>
          <Route path="/" element={<Homepage />} />
+         <Route path="/register" element={<Register />} />
        </Routes>
      </Router>
     </div>

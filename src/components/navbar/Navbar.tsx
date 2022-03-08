@@ -4,12 +4,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { Link } from "react-router-dom";
 import {
 	ButtonBoxA,
@@ -82,7 +78,7 @@ export default function PrimarySearchAppBar() {
 					
 			</ListItem>
 			<ListItem>
-			<Link to="/">
+			<Link to="/register">
 							<NavButton variant="contained" className="free">
 								Register
 							</NavButton>
@@ -130,7 +126,7 @@ export default function PrimarySearchAppBar() {
 								Log In
 							</NavButton>
 						</Link>
-						<Link to="/">
+						<Link to="/register">
 							<NavButton variant="contained" className="free">
 								Register
 							</NavButton>

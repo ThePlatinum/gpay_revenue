@@ -25,8 +25,8 @@ align-items: center;
 export const MainRight = styled(Box)`
 width: 60%;
 img {
-    width: 100%;
-    
+    width: 80%;
+    margin: 0 auto;
 }
 @media only screen and (max-width: 480px){
     width: 50%;
@@ -35,8 +35,8 @@ img {
 
 export const MainLeft = styled(Box)`
 
-width: 40%;
-
+width: 35%;
+padding-right: 4rem;
 .MuiTypography-root.MuiTypography-body1{
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
@@ -47,6 +47,9 @@ text-align: start;
 letter-spacing: -0.015em;
 color: #000;
 
+}
+@media only screen and (max-width: 1024px){
+    width: 40%;
 }
 @media only screen and (max-width: 480px){
     width: 50%;

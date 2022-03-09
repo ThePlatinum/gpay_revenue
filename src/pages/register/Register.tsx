@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import Registration from '../../components/registration1/Registration';
+import Registration from '../../components/registration2/Registration';
 const Register = () => {
   return (
     <div>

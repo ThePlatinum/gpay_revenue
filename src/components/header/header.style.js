@@ -5,8 +5,7 @@ import {Box} from "@mui/material"
 export const Container = styled(Box)`
 width: 100%;
 height: 582px;
-background-color: pink;
-background-image: url(${bg});
+background-image: url("./Rectangle 3.png");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -50,6 +49,10 @@ justify-content: space-around;
 .MuiButton-root.MuiButton-outlined {
     border: 1px solid #E87615;
     color: #E87615;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
     &:hover {
         color: #ffffff;
         background-color: #E87615;
@@ -58,6 +61,10 @@ justify-content: space-around;
 .MuiButton-root.MuiButton-contained {
     background-color: #E87615;
     color: #FFFFFF;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
     &:hover {
         background-color: #ffffff;
         color: #E87615;

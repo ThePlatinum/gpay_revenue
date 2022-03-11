@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import bg from "../../images/Rectangle 3.png"
 import {Box} from "@mui/material"
 
 export const Container = styled(Box)`

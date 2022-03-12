@@ -70,7 +70,7 @@ export default function PrimarySearchAppBar() {
 			
 			  </ListItem>
 			<ListItem>
-			<Link to="/signin">
+			<Link to="/login">
 							<NavButton variant="outlined" className="sign">
 								Log In
 							</NavButton>

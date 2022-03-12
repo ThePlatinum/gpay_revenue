@@ -90,12 +90,12 @@ const Footer = () => {
                             </FooterList>
 						</HeadBoxA>
 						<HeadBoxB>
-                        <Link to="/">
+                        <Link to="/register">
 							<NavButton variant="contained" className="free">
 								Register
 							</NavButton>
 						</Link>
-                        <Link to="/signin">
+                        <Link to="/login">
 							<NavButton variant="outlined" className="sign">
 								Log In
 							</NavButton>

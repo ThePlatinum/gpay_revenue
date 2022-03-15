@@ -14,7 +14,30 @@ const PaymentOption = () => {
     <Typography variant='body1'>Click on any of the payment channels to make your online payment.</Typography>
     </TextBox>
     <CardBox>
-        <Button></Button>
+        <Button variant="contained">
+            Card
+            <img src={arrow} alt="arrow" />
+        </Button>
+        <Button variant="contained">
+            Remita
+            <img src={arrow} alt="arrow" />
+        </Button>
+        <Button variant="contained">
+            Interswitch
+            <img src={arrow} alt="arrow" />
+        </Button>
+        <Button variant="contained">
+            NIBSS
+            <img src={arrow} alt="arrow" />
+        </Button>
+        <Button variant="contained">
+            Internet Banking
+            <img src={arrow} alt="arrow" />
+        </Button>
+        <Button variant="contained">
+            USSD
+            <img src={arrow} alt="arrow" />
+        </Button>
     </CardBox>
 </ChildTop>
         </Child>

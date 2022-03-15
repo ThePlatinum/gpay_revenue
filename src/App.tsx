@@ -8,6 +8,9 @@ import Signin from './pages/signin/Signin';
 import Dashboard from './pages/dashboard/Dashboard';
 import Taxoption from './pages/taxoption/Taxoption';
 import PaymentOption from './pages/paymentoption/PaymentOption';
+import PaymentSuccesful from './pages/paymentsuccessful/PaymentSuccesful';
+import TransactionReceipt from './pages/transactionreceipt/TransactionReceipt';
+import CardOption from './pages/cardoption/CardOption';
 
 
 
@@ -24,6 +27,9 @@ function App() {
          <Route path='/dashboard' element={<Dashboard />} />
          <Route path='/taxoption' element={<Taxoption />} />
          <Route path='/paymentoption' element={<PaymentOption />} />
+         <Route path='/cardoption' element={<CardOption/>} />
+         <Route path='/paymentsuccessful' element={<PaymentSuccesful />} />
+         <Route path='/receipt' element={<TransactionReceipt />} />
        </Routes>
      </Router>
     </div>

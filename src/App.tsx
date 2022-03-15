@@ -5,6 +5,9 @@ import Homepage from './pages/home/Homepage';
 import { GlobalStyles } from './app.style';
 import Register from './pages/register/Register';
 import Signin from './pages/signin/Signin';
+import Dashboard from './pages/dashboard/Dashboard';
+import Taxoption from './pages/taxoption/Taxoption';
+import PaymentOption from './pages/paymentoption/PaymentOption';
 
 
 
@@ -18,6 +21,9 @@ function App() {
          <Route path="/" element={<Homepage />} />
          <Route path="/register" element={<Register />} />
          <Route path="/login" element={<Signin />} />
+         <Route path='/dashboard' element={<Dashboard />} />
+         <Route path='/taxoption' element={<Taxoption />} />
+         <Route path='/paymentoption' element={<PaymentOption />} />
        </Routes>
      </Router>
     </div>

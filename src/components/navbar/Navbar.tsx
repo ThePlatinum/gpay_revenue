@@ -121,7 +121,7 @@ export default function PrimarySearchAppBar() {
 						</Link>
 					</ButtonBoxA>
 					<ButtonBoxB sx={{ display: { xs: "none", md: "flex" } }}>
-						<Link to="/signin">
+						<Link to="/login">
 							<NavButton variant="outlined" className="sign">
 								Log In
 							</NavButton>

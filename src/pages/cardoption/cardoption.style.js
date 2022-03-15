@@ -21,7 +21,7 @@ margin-bottom: 4rem;
 `;
 
 export const ChildBox = styled(Box)`
-  height: 628px;
+  height: 608px;
   width: 40%;
   border: 0.857143px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;

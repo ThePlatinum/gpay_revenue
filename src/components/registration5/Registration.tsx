@@ -2,7 +2,7 @@ import { Button, Typography } from '@mui/material'
 import React from 'react'
 import { Child, Container, Title } from './registration5.style'
 
-const Registration = () => {
+const Registration5 = () => {
   return (
     <Container>
         <Title>
@@ -16,4 +16,4 @@ const Registration = () => {
   )
 }
 
-export default Registration
+export default Registration5

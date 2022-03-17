@@ -5,7 +5,10 @@ import TextField from '@mui/material/TextField';
 import { Child, Container, Extra, Title } from './registration1.style'
 import { Link } from 'react-router-dom';
 
-const Registration = () => {
+type ChangeState = {
+    setState: React.Dispatch<React.SetStateAction<number>>
+}
+const Registration1 = ({setState} : ChangeState) => {
   return (
     <Container>
         <Title>
@@ -20,7 +23,7 @@ const Registration = () => {
                 </div>
                 <TextField id="outlined-basic" label="Email Address" variant="outlined" type="email" />
                 <TextField id="outlined-basic" label="BVN" variant="outlined" type="number" />
-                <Button variant="contained">Continue</Button>
+                <Button variant="contained" onClick={()=>setState(2)}>Continue</Button>
             </form>
             <Extra>
                 <Typography variant="body2">Already have an account?</Typography> <Link to="/login">   Log in</Link>
@@ -30,4 +33,4 @@ const Registration = () => {
   )
 }
 
-export default Registration
+export default Registration1

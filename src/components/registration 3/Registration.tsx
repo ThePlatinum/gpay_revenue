@@ -2,7 +2,8 @@ import { Button, Typography } from '@mui/material'
 import React from 'react'
 import TextField from '@mui/material/TextField';
 import { ButtonBox, Child, Container, Title } from './registration3.style';
-const Registration = () => {
+
+const Registration3 = () => {
 return (
     <Container>
         <Title>
@@ -22,4 +23,4 @@ return (
 )
 }
 
-export default Registration
+export default Registration3

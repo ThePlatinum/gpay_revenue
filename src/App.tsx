@@ -11,6 +11,7 @@ import PaymentOption from './pages/paymentoption/PaymentOption';
 import PaymentSuccesful from './pages/paymentsuccessful/PaymentSuccesful';
 import TransactionReceipt from './pages/transactionreceipt/TransactionReceipt';
 import CardOption from './pages/cardoption/CardOption';
+import ACardoption from './pages/agent/cardoption/ACardoption';
 
 
 
@@ -30,6 +31,9 @@ function App() {
          <Route path='/cardoption' element={<CardOption/>} />
          <Route path='/paymentsuccessful' element={<PaymentSuccesful />} />
          <Route path='/receipt' element={<TransactionReceipt />} />
+
+         {/* AGENT */}
+         <Route path='/agent/cardoption' element={<ACardoption/>} />
        </Routes>
      </Router>
     </div>

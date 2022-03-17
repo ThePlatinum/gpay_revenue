@@ -3,7 +3,7 @@ import React from 'react'
 import TextField from '@mui/material/TextField';
 import { ButtonBox, Child, Container, Extra, InputBox, InputChild, LabelDiv, Title } from './registration2.style'
 
-const Registration = () => {
+const Registration2 = () => {
   return (
     <Container>
       <Title>
@@ -161,4 +161,4 @@ const Registration = () => {
   )
 }
 
-export default Registration
+export default Registration2

@@ -3,7 +3,7 @@ import OtpInput from 'react-otp-input';
 import { Link } from 'react-router-dom';
 import { ButtonBox, Child, Container, Extra, OtpBox, Title } from './registration4.style'
 
-const Registration = () => {
+const Registration4 = () => {
   return (
     <Container>
       <Title>
@@ -28,4 +28,4 @@ const Registration = () => {
   )
 }
 
-export default Registration
+export default Registration4

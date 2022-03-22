@@ -3,7 +3,11 @@ import React from 'react'
 import TextField from '@mui/material/TextField';
 import { ButtonBox, Child, Container, Extra, InputBox, InputChild, LabelDiv, Title } from './registration2.style'
 
-const Registration2 = () => {
+type ChangeState = {
+  setState: React.Dispatch<React.SetStateAction<number>>
+}
+
+const Registration2  = ({setState} : ChangeState) => {
   return (
     <Container>
       <Title>
@@ -152,7 +156,7 @@ const Registration2 = () => {
             <Typography variant='body1'>confirm that the above information is true and correct and that Joint Tax Board (JTB) can share the data for the purposes of Automatic Exchange of Information (AEOI) under the extant tax laws with relevant organization including government agencies and financial institutions.</Typography>
           </Extra>
           <ButtonBox>
-            <Button variant="contained">Update</Button>
+            <Button variant="contained" onClick={()=>setState(3)}>Update</Button>
             <Button variant="contained" className="reset">Reset</Button>
           </ButtonBox>
         </form>

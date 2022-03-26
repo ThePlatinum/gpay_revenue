@@ -3,7 +3,10 @@ import React from 'react'
 import TextField from '@mui/material/TextField';
 import { ButtonBox, Child, Container, Title } from './registration3.style';
 
-const Registration3 = () => {
+type ChangeState = {
+    setState: React.Dispatch<React.SetStateAction<number>>
+  }
+const Registration3 = ({setState} : ChangeState) => {
 return (
     <Container>
         <Title>
@@ -15,7 +18,7 @@ return (
         <TextField id="outlined-basic" label="Mr" variant="outlined" type="text" />
         <TextField id="outlined-basic" label="Mr" variant="outlined" type="text" />
         <ButtonBox>
-            <Button variant="contained">Create</Button>
+            <Button variant="contained" onClick={()=>setState(4)}> Create</Button>
         </ButtonBox>
         </form>
         </Child>

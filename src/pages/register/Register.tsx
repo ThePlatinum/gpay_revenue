@@ -13,7 +13,11 @@ const [state, setState] = useState(1)
   return (
     <div>
         <Navbar/>
-        {state === 1 ? (<Registration1 setState={setState}/>) : (<Registration2/>)}
+        {state === 1 ? (<Registration1 setState={setState}/>) : null}
+        {state === 2 ? (<Registration2 setState={setState}/>) : null}
+        {state === 3 ? (<Registration3 setState={setState}/>) : null}
+        {state === 4 ? (<Registration4 setState={setState}/>) : null}
+        {state === 5 ? (<Registration5 />) : null}
         <Footer />
     </div>
   )

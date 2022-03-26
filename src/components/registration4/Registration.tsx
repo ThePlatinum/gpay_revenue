@@ -3,7 +3,10 @@ import OtpInput from 'react-otp-input';
 import { Link } from 'react-router-dom';
 import { ButtonBox, Child, Container, Extra, OtpBox, Title } from './registration4.style'
 
-const Registration4 = () => {
+type ChangeState = {
+  setState: React.Dispatch<React.SetStateAction<number>>
+}
+const Registration4 = ({setState} : ChangeState) => {
   return (
     <Container>
       <Title>
@@ -21,7 +24,7 @@ const Registration4 = () => {
          <Link to="/">Resend</Link>
        </Extra>
        <ButtonBox>
-         <Button variant="contained">Verify</Button>
+         <Button variant="contained" onClick={()=>setState(5)}>Verify</Button>
        </ButtonBox>
       </Child>
     </Container>

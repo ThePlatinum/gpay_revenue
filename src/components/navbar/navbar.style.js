@@ -87,7 +87,7 @@ export const MenuToolBar = styled(Toolbar)`
 			width: 15% !important;
 		}
 	}
-	}
+	
 `;
 export const MenuLogoBox = styled(Box)`
 	width: 45%;
@@ -211,7 +211,7 @@ export const ButtonBoxB = styled(Box)`
 		
 	}
 	@media only screen and (min-width: 1241px) and (max-width: 1369px){
-		width 20%;
+		width: 20%;
 	}
 	@media only screen and (max-width: 1240px) and (min-width:900px){
 		width: 24%;

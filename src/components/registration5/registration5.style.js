@@ -47,6 +47,10 @@ padding: 0.6rem 2rem;
 font-weight: 500;
 font-size: 12.8571px;
 line-height: 16px;
+a {
+    color: inherit;
+    text-decoration: none;
+}
 }
 `
 
@@ -64,5 +68,6 @@ padding: 0.6rem 2rem;
 font-weight: 500;
 font-size: 12.8571px;
 line-height: 16px;
+
 }
 `

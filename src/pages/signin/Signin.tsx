@@ -19,7 +19,11 @@ const Signin = () => {
           <TextField id="outlined-basic" label="Enter your TIN" variant="outlined" type="text" />
           <TextField id="outlined-basic" label="Enter your email" variant="outlined" type="email" />
           <TextField id="outlined-basic" label="Enter your password" variant="outlined" type="password" />
-          <Button variant="contained">Log in here</Button>
+          <Link to={'/dashboard'}>
+            <Button variant="contained">
+              Log in
+            </Button>
+          </Link>
           <Link to="/">Forgot password</Link>
           <Extra>
             <Typography variant="body2">Don’t have an account? </Typography>

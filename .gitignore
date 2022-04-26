@@ -24,6 +24,4 @@ yarn-error.log*
 
 # firebase hosting and github action
 /.firebase
-/.github
-firebase.json
 .firebaserc
